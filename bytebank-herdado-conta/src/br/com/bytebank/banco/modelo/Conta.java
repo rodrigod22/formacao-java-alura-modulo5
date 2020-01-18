@@ -8,6 +8,11 @@ public abstract class Conta {
     private Cliente titular;
     private static int total = 0;
     
+    /**
+     * Construtor para inicializar o objeto a partir da agencia e conta
+     * @param agencia
+     * @param numero 
+     */
     public Conta(int agencia, int numero){
         Conta.total++;
         //System.out.println("O total de contas é " + Conta.total);
@@ -19,6 +24,12 @@ public abstract class Conta {
 
     public abstract void deposita(double valor);
 
+    /**
+    *
+    *
+    *@param valor
+    *@throws SaldoInsuficienteException
+    */
     public void saca(double valor) throws SaldoInsuficienteException{
     	
         if(this.saldo < valor) {
