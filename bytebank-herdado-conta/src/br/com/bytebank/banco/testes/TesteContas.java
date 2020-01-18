@@ -1,5 +1,6 @@
 package br.com.bytebank.banco.testes;
 
+import br.com.bytebank.banco.especial.ContaEspecial;
 import br.com.bytebank.banco.modelo.ContaCorrente;
 import br.com.bytebank.banco.modelo.ContaPoupanca;
 import br.com.bytebank.banco.modelo.SaldoInsuficienteException;
@@ -26,6 +27,10 @@ public class TesteContas {
 		System.out.println("CC: " + cc.getSaldo());
 		System.out.println("CP: " + cp.getSaldo());
 
+		
+		ContaEspecial ce = new ContaEspecial(333, 33333);
+		ce.getSaldo();
+		
 
 	}
 
